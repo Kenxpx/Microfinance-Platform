@@ -1,0 +1,17 @@
+[package]
+name = "microfinance-platform"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sbor = { git = "https://github.com/radixdlt/radixdlt-scrypto" }
+scrypto = { git = "https://github.com/radixdlt/radixdlt-scrypto" }
+
+[dev-dependencies]
+scrypto-test = { git = "https://github.com/radixdlt/radixdlt-scrypto" }
+
+[profile.release]
+opt-level = 's'
+lto = true
+codegen-units = 1
+panic = 'abort'
